@@ -1,0 +1,38 @@
+{
+	"name": "postcss-each-variables",
+	"version": "0.0.0",
+	"description": "PostCSS plugin enabling variable mapping for @each",
+	"license": "MIT",
+	"repository": "awcross/postcss-each-variables",
+	"author": {
+		"name": "Alex Cross",
+		"email": "crossaw@gmail.com",
+		"url": "alexcross.io"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"postcss",
+		"css",
+		"postcss-plugin",
+		"each",
+		"variables",
+		"rules",
+		"property"
+	],
+	"dependencies": {
+		"postcss": "^6.0.1",
+		"reduce-function-call": "^1.0.2"
+	},
+	"devDependencies": {
+		"ava": "^0.23.0",
+		"xo": "^0.18.2"
+	}
+}
