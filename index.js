@@ -20,7 +20,10 @@ const resolveValue = (value, map) => {
         // Convert to object
 		const result = decls.reduce((obj, decl) => {
 			const [prop, val] = decl.split(/[:]/).map(str => str.trim());
-			return {...obj, [prop]: val};
+
+			return Object.assign({}, obj, {
+				[prop]: val
+			});
 		}, {});
 
         // Remove undefined values
