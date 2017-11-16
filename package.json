@@ -1,6 +1,6 @@
 {
 	"name": "postcss-each-variables",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "PostCSS plugin enabling variable mapping for @each",
 	"license": "MIT",
 	"repository": "awcross/postcss-each-variables",
