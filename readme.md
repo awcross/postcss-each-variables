@@ -16,6 +16,8 @@ postcss([ require('postcss-each-variables') ])
 
 Note: you must include postcss-each-variables before other at-rules plugins.
 
+### Before
+
 ```css
 :root {
 	--breakpoints: (
@@ -32,6 +34,8 @@ Note: you must include postcss-each-variables before other at-rules plugins.
 	}
 }
 ```
+
+### After
 
 ```css
 :root {
