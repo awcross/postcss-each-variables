@@ -19,23 +19,23 @@ const resolveValue = (value, map) => {
 
         // Convert to object
 		const result = decls.reduce((obj, decl) => {
-			const [prop, val] = decl.split(/[:]/).map(str => str.trim());
+			const arr = decl.split(/[:]/).map(str => str.trim());
 
 			return Object.assign({}, obj, {
-				[prop]: val
+				[arr[0]]: arr[1]
 			});
 		}, {});
 
         // Remove undefined values
 		const props = Object.keys(result).filter(n => n);
-		const values = Object.values(result).filter(n => n);
+		const values = Object.keys(result).map(n => result[n]).filter(n => n);
 
 		return values.length ? `(${props}), (${values})` : `(${props})`;
 	});
 };
 
 const processRule = (params, map) => {
-	const [, values] = params.split(/\s+in\s+/).map(str => postcss.list.comma(str));
+	const values = params.split(/\s+in\s+/).map(str => postcss.list.comma(str))[1];
 	params = values.reduce((acc, value) => acc.replace(value, resolveValue(value, map)), params);
 
 	return params;
